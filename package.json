@@ -1,0 +1,28 @@
+{
+  "name": "@m7kra/color-theme",
+  "version": "1.0.0",
+  "description": "React hooks that make color theme management easy",
+  "homepage": "https://github.com/m7kra/color-theme",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.esm.js",
+  "scripts": {
+    "build": "tsup"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "theme"
+  ],
+  "author": "M7kra",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^18.2.45",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}
