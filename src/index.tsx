@@ -1,8 +1,9 @@
 import React, { useState, useEffect, createContext, useContext } from 'react';
 
-type ColorTheme = 'light' | 'dark' | 'system';
+type RawColorTheme = 'light' | 'dark' | 'system';
+type ColorTheme = 'light' | 'dark';
 
-export function useColorTheme(defaultTheme: ColorTheme = 'system') {
+export function useColorTheme(defaultTheme: RawColorTheme = 'system') {
 
     // To detect system theme, we try to match a CSS media query
     const media = window.matchMedia('(prefers-color-scheme: dark)');
@@ -40,7 +41,7 @@ export function useColorTheme(defaultTheme: ColorTheme = 'system') {
 
 const ColorThemeContext = createContext<ReturnType<typeof useColorTheme> | null>(null);
 
-export function ColorThemeProvider({ children, theme = 'system' }: { children: React.ReactNode, theme?: ColorTheme }) {
+export function ColorThemeProvider({ children, theme = 'system' }: { children: React.ReactNode, theme?: RawColorTheme }) {
     return (
         <ColorThemeContext.Provider value={useColorTheme(theme)}>
             {children}

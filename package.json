@@ -1,6 +1,6 @@
 {
   "name": "@m7kra/color-theme",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React hooks that make color theme management easy",
   "homepage": "https://github.com/m7kra/color-theme",
   "main": "./dist/index.js",
